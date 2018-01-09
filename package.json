@@ -1,0 +1,17 @@
+{
+  "name": "scripts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "nghiattran <nghiattran3@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "commander": "^2.12.2",
+    "copy-to-clipboard": "^3.0.8",
+    "inquirer": "^4.0.2",
+    "inquirer-autocomplete-prompt": "^0.12.1",
+    "prompt-autocomplete": "^1.2.0",
+    "prompt-autocompletion": "^0.1.2",
+    "shelljs": "^0.7.8"
+  }
+}
