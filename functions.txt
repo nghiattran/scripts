@@ -1,9 +1,9 @@
 aa() {
-  echo -e "alias ${1}='${2}'" >> ~/.bash_profile && load 
+  echo -e "alias ${1}='${2}'" >> ~/.bash_alias && load 
 }
 
 ad() {
-  sed '/alias ${1}=/d' -i ~/.bash_profile
+  sed '/alias ${1}=/d' -i ~/.bash_alias
 }
 
 au() {
@@ -48,4 +48,8 @@ import-git-aliases() {
 
 fd() {
   git diff ${1} ${2} --name-status | awk "{print \"$Red\" \$1 \"\t\" \"$Cyan\" \$2 \"$Colour_Off\"}"
+}
+
+find-git() {
+  find ${1} -maxdepth 5 -name .git -type d -prune -print0 | xargs -0 -n1 dirname
 }

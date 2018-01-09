@@ -1,7 +1,5 @@
 [core]
 	editor = nano
-[commit]
-	template = /nail/home/nghia/.git-commit-template.txt
 [alias]
 	st = status
 	alias = config --get-regexp ^alias\\.

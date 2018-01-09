@@ -52,7 +52,7 @@ program
                 },
             }])
             .then(answers => {
-                fs.writeFileSync(process.env.ANSWER_FILE, answers.answer);
+                fs.writeFileSync(process.env.DOLET_ANSWER_FILE, answers.answer.trim());
             });
     });
 
