@@ -53,3 +53,7 @@ fd() {
 find-git() {
   find ${1} -maxdepth 5 -name .git -type d -prune -print0 | xargs -0 -n1 dirname
 }
+
+notebook() {
+  jupyter notebook --no-browser --port=${1} --ip=0.0.0.0 --no-browser --config=~/pg/txn-growth-data-science/ipython_notebook_config.py
+}
