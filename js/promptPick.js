@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-Promise = require('bluebird')
 const inquirer = require('inquirer');
 const program = require('commander');
 const path = require('path');
