@@ -57,3 +57,11 @@ find-git() {
 notebook() {
   jupyter notebook --no-browser --port=${1} --ip=0.0.0.0 --no-browser --config=~/pg/txn-growth-data-science/ipython_notebook_config.py
 }
+
+ji() {
+  open https://jira.yelpcorp.com/browse/${1}
+}
+
+board() {
+  open https://reviewboard.yelpcorp.com/r/${1}
+}
