@@ -13,7 +13,7 @@ alias gfl='git log --all --full-history --'
 alias got='git'
 alias gp="git push origin HEAD --force"
 alias gpo="git push origin HEAD"
-alias uniq-history="HISTTIMEFORMAT='' HISTCONTROL=ignoredups history | cut -c 8- | grep -v 'grep\|hf\|uniq-history' | dedupe"
+alias uniq-history="HISTTIMEFORMAT='' HISTCONTROL=ignoredups history | cut -c 8- | grep -v 'grep\|hf\|uniq-history' | tac | dedupe"
 alias hf="uniq-history | grep"
 alias he='prompt-pick ask "Pick a command" "$(uniq-history)" && $(cat $DOLET_ANSWER_FILE)'
 alias ipy="ipython -i tools/interactive.py"
