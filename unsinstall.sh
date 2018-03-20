@@ -1,1 +1,1 @@
-rm ~/.bash_profile ~/.bash_alias ~/.bash_functions ~/.gitconfig
+rm -rf $DOLET_DIR $BASH_PROFILE_FILE
