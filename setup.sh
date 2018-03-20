@@ -1,12 +1,12 @@
 source env.sh
 
-mkdir -p $DOLET_DIR
+mkdir -p $DOLET_DIR $DOLET_DIR/js $DOLET_DIR/node_modules
 
 # add env variable to bash profile
 cat env.sh > $BASH_PROFILE_FILE
 cat bash.txt >> $BASH_PROFILE_FILE
 
-# copy commands
+# copy alias
 cp alias.txt $DOLET_ALIAS_FILE
 cp functions.txt $DOLET_FUNCTION_FILE
 
@@ -18,3 +18,4 @@ cp -rf node_modules $DOLET_NODE_MODULES
 cat .gitconfig > $HOME/.gitconfig
 
 source $BASH_PROFILE_FILE
+

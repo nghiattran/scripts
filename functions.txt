@@ -40,16 +40,22 @@ cd() {
   builtin cd  ${1} && pwd >> ~/.cd_history && echo "$(tail -20 ~/.cd_history)" > ~/.cd_history
 }
 
-import-git-aliases() {
-  while read CMD; do
-    $(git config --global $CMD)
-  done
-}
-
 fd() {
   git diff ${1} ${2} --name-status | awk "{print \"$Red\" \$1 \"\t\" \"$Cyan\" \$2 \"$Colour_Off\"}"
 }
 
-find-git() {
-  find ${1} -maxdepth 5 -name .git -type d -prune -print0 | xargs -0 -n1 dirname
+findGit() {
+  find ${1} -type d -exec test -e '{}/.git' ';' -print -prune
+}
+
+notebook() {
+  jupyter notebook --no-browser --port=${1} --ip=0.0.0.0 --no-browser --config=~/pg/txn-growth-data-science/ipython_notebook_config.py
+}
+
+ji() {
+  open https://jira.yelpcorp.com/browse/${1}
+}
+
+board() {
+  open https://reviewboard.yelpcorp.com/r/${1}
 }
