@@ -1,7 +1,7 @@
 alias prompt-pick='$DOLET_JS_DIR/promptPick.js'
 alias aef='nano $DOLET_FUNCTION_FILE'
 alias ae="nano $DOLET_ALIAS_FILE"
-alias af='cat $DOLET_ALIAS_FILE | grep'
+alias af='alias | grep'
 alias bz="cd ~/pg/biz_modern_pages"
 alias clean='rm **/._*'
 alias contributors='git shortlog -sne'
@@ -17,7 +17,7 @@ alias uniqHistory="HISTTIMEFORMAT='' HISTCONTROL=ignoredups history | cut -c 8- 
 alias hf="uniqHistory | grep"
 alias he='prompt-pick ask "Pick a command" "$(uniqHistory)" && $(cat $DOLET_ANSWER_FILE)'
 alias ipy="ipython -i tools/interactive.py"
-alias jj="cd /nail/home/nghia/pg/yelp-main"
+alias jj="cd ~/pg/yelp-main"
 alias last-visited-branch='visited-branch | dedupe'
 alias load="sort $DOLET_ALIAS_FILE -o $DOLET_ALIAS_FILE && source $BASH_PROFILE_FILE"
 alias mr='mm && pgctl restart'
@@ -37,9 +37,9 @@ alias visited-branch="git reflog | grep -o 'checkout: moving from .* to ' | sed 
 alias yc='rm -rf yarn.lock node_modules/'
 alias yk='yelp/testing/tools/karma.py'
 alias yr='yc && yarn && yarn-tools fix-duplicates yarn.lock && make'
-alias gitnav='prompt-pick ask "Pick directory" "$(findGit ~/pg)" && cd "$(cat $DOLET_ANSWER_FILE)"'
+alias gitnav='prompt-pick ask "Pick directory" "$(findGit ~)" && cd "$(cat $DOLET_ANSWER_FILE)"'
 alias gc='prompt-pick ask "Pick branch" "$(git branch | grep -v '\''*'\'')" && git checkout "$(cat $DOLET_ANSWER_FILE)"'
-alias devbox='ssh -A nghia@dev11-uswest1cdevc'
-alias sync-devbox='sshfs -o IdentityFile=~/.ssh/id_rsa nghia@dev11-uswest1cdevc:/nail/home/nghia/pg /Users/nghia/yelp/pg  -oauto_cache,reconnect'
+alias devbox='ssh -A $dev11'
+alias sync-devbox='sshfs -o IdentityFile=~/.ssh/id_rsa $dev11:/nail/home/nghia/pg ~/pg  -oauto_cache,reconnect'
 alias agentup='ssh-add ~/.ssh/id_rsa'
 alias init='agentup && sync-devbox && devbox'

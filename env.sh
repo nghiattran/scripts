@@ -10,5 +10,7 @@ export DOLET_FUNCTION_FILE="${DOLET_DIR}/dolet_functions"
 
 export DOLET_JS_DIR="${DOLET_DIR}/js"
 export DOLET_NODE_MODULES="${DOLET_DIR}/node_modules"
+
+export dev11="10.40.1.117"
 # end env variables
 

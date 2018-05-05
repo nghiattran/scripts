@@ -1,14 +1,16 @@
+#!/bin/bash
+
 source env.sh
 
 mkdir -p $DOLET_DIR $DOLET_DIR/js $DOLET_DIR/node_modules
 
 # add env variable to bash profile
 cat env.sh > $BASH_PROFILE_FILE
-cat bash.txt >> $BASH_PROFILE_FILE
+cat bash.sh >> $BASH_PROFILE_FILE
 
 # copy alias
-cp alias.txt $DOLET_ALIAS_FILE
-cp functions.txt $DOLET_FUNCTION_FILE
+cp alias.sh $DOLET_ALIAS_FILE
+cp functions.sh $DOLET_FUNCTION_FILE
 
 # copy js file
 cp -rf js $DOLET_JS_DIR
