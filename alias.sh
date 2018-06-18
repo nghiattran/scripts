@@ -26,12 +26,12 @@ alias pf='cat package.json | grep '
 alias pgd="pgctl debug uwsgi"
 alias pgr="pgctl restart"
 alias pgs="pgctl status"
-alias re="gp && review-branch"
+alias re="gpo && review-branch"
 alias release='pkg-release --no-merge -v'
 alias root='cd ~'
 alias rt='make && pgctl restart'
 alias sa='cat $DOLET_ALIAS_FILE'
-alias ss='git push origin HEAD --force && seagull-run'
+alias ss='gpo && ymt-run'
 alias tfd="fd HEAD^1 HEAD | grep test"
 alias visited-branch="git reflog | grep -o 'checkout: moving from .* to ' | sed -e 's/checkout: moving from //' -e 's/ to $//' | head -20"
 alias yc='rm -rf yarn.lock node_modules/'
@@ -39,7 +39,7 @@ alias yk='yelp/testing/tools/karma.py'
 alias yr='yc && yarn && yarn-tools fix-duplicates yarn.lock && make'
 alias gitnav='prompt-pick ask "Pick directory" "$(findGit ~)" && cd "$(cat $DOLET_ANSWER_FILE)"'
 alias gc='prompt-pick ask "Pick branch" "$(git branch | grep -v '\''*'\'')" && git checkout "$(cat $DOLET_ANSWER_FILE)"'
-alias devbox='ssh -A $dev11'
-alias sync-devbox='sshfs -o IdentityFile=~/.ssh/id_rsa $dev11:/nail/home/nghia/pg ~/pg  -oauto_cache,reconnect'
+alias devbox='ssh -A $dev5'
+alias sync-devbox='sshfs -o IdentityFile=~/.ssh/id_rsa $dev5:/nail/home/nghia/pg ~/pg  -oauto_cache,reconnect'
 alias agentup='ssh-add ~/.ssh/id_rsa'
 alias init='agentup && sync-devbox && devbox'
