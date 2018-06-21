@@ -13,7 +13,7 @@ cp alias.sh $DOLET_ALIAS_FILE
 cp functions.sh $DOLET_FUNCTION_FILE
 
 # copy js file
-cp -rf js $DOLET_JS_DIR
+cp js/* $DOLET_JS_DIR
 cp -rf node_modules $DOLET_NODE_MODULES
 
 # setup git
